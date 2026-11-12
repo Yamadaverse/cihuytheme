@@ -1,0 +1,9 @@
+# Theme-owned files copied only after file, integration, database and build preflight.
+app/Http/Controllers/Admin/ThemeSettingsController.php
+resources/views/admin/theme-settings/index.blade.php
+resources/views/layouts/partials/theme-audio-player.blade.php
+resources/scripts/assets/css/neobrutalism.css
+public/themes/pterodactyl/css/neobrutal-admin.css
+database/migrations/2026_11_11_000000_create_theme_settings_table.php
+database/migrations/2026_11_11_000001_add_music_file_to_theme_settings_table.php
+database/migrations/2026_11_11_000002_add_background_video_columns_to_theme_settings_table.php
