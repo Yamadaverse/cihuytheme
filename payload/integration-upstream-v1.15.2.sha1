@@ -1,0 +1,8 @@
+20ca084d41313ea14e26cc89bc04329b64b8701a resources/views/layouts/admin.blade.php
+a2d218a53747d0b086cc366cf698edb9f7700f3a resources/views/templates/wrapper.blade.php
+a1e102eed55f1c6413970cf92303eb805a59471a routes/admin.php
+2aade24755c6c3ef2e4d80abf9ef497305e4b8c3 resources/scripts/index.tsx
+aa2b5a70d2a32389f346b92e64fec302f8284e53 resources/scripts/components/dashboard/ServerRow.tsx
+de7ba3b3f918591785cbb9b500f43b69fb2b6ee0 resources/scripts/components/server/console/ServerConsoleContainer.tsx
+f5f81898f72313a06fd1e891a708e432b7cc9cad resources/scripts/components/server/console/PowerButtons.tsx
+2976cf789e04a2335395e1ba342d303143488035 resources/scripts/routers/ServerRouter.tsx
