@@ -1,0 +1,866 @@
+/* =========================================================
+   Pterodactyl Neobrutalism — Admin Panel (White + Orange)
+   Overrides Stellar's admin-theme.blade.php by retheming
+   its --a-* variable set, then adding brutalist detail.
+   ========================================================= */
+
+/* ---------- LIGHT ---------- */
+:root {
+    --a-bg: #FFFFFF;
+    --a-panel: #FFF4E8;
+    --a-panel-2: #FFE4CC;
+    --a-accent: #FF6B00;
+    --a-accent-h: #D95A00;
+    --a-text: #000000;
+    --a-muted: #4A4038;
+    --a-input: #FFFFFF;
+    --a-radius: 4px;
+    --a-border: rgba(0, 0, 0, 0.18);
+    --a-border-strong: rgba(0, 0, 0, 0.45);
+
+    --admin-bg: #FFFFFF;
+    --admin-cream: #FFF4E8;
+    --admin-orange: #FF6B00;
+    --admin-ink: #000000;
+    --admin-ink-soft: #4A4038;
+    --admin-surface: #FFFFFF;
+    --admin-panel-2: #FFE4CC;
+}
+
+/* ---------- DARK ---------- */
+html.dark {
+    --admin-bg: #111111;
+    --admin-cream: #1C1C1C;
+    --admin-ink: #FFFFFF;
+    --admin-ink-soft: #C9C4BF;
+    --admin-surface: #242424;
+    --admin-panel-2: #242424;
+
+    /* retheme Stellar vars for dark */
+    --a-bg: #111111;
+    --a-panel: #1C1C1C;
+    --a-panel-2: #242424;
+    --a-accent: #FF6B00;
+    --a-accent-h: #FF8A33;
+    --a-text: #FFFFFF;
+    --a-muted: #C9C4BF;
+    --a-input: #242424;
+    --a-border: rgba(255, 255, 255, 0.22);
+    --a-border-strong: rgba(255, 255, 255, 0.45);
+}
+
+.admin-font,
+.login-page .login-box,
+body.skin-blue {
+    font-family: 'Space Grotesk', sans-serif !important;
+}
+
+body.skin-blue,
+.wrapper,
+.content-wrapper,
+.right-side,
+.content-wrapper .content {
+    background-color: var(--admin-bg) !important;
+    color: var(--admin-ink) !important;
+}
+
+h1, h2, h3, h4, h5,
+.content-header > h1,
+.box-title,
+.dashboard-title,
+.small-box h3 {
+    font-family: 'Archivo Black', 'Space Grotesk', sans-serif !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em;
+    color: var(--admin-ink) !important;
+    font-weight: 900 !important;
+}
+
+/* ---------- Header ---------- */
+.main-header .logo,
+.main-header .logo:hover {
+    background-color: var(--admin-orange) !important;
+    color: #000000 !important;
+    font-family: 'Archivo Black', sans-serif !important;
+    text-transform: uppercase !important;
+    border-bottom: 3px solid #000000 !important;
+    border-right: 3px solid #000000 !important;
+}
+
+.main-header .navbar {
+    background-color: var(--admin-cream) !important;
+    border-bottom: 3px solid #000000 !important;
+}
+
+html.dark .main-header .navbar {
+    border-bottom-color: #FFFFFF !important;
+}
+
+.main-header .navbar .nav > li > a,
+.main-header .sidebar-toggle,
+.main-header .navbar .sidebar-toggle:hover {
+    color: var(--admin-ink) !important;
+    font-weight: 800 !important;
+    background-color: transparent !important;
+}
+
+.main-header .navbar .nav > li > a:hover,
+.main-header .navbar .nav > li > a:focus {
+    background-color: var(--admin-orange) !important;
+    color: #000000 !important;
+}
+
+/* ---------- Sidebar ---------- */
+.skin-blue .wrapper {
+    background-color: var(--admin-bg) !important;
+}
+
+.skin-blue .main-sidebar,
+.skin-blue .left-side,
+.main-sidebar,
+.left-side {
+    background-color: var(--admin-cream) !important;
+    color: var(--admin-ink) !important;
+}
+
+.main-sidebar,
+.left-side {
+    border-right: 3px solid #000000 !important;
+}
+
+html.dark .main-sidebar,
+html.dark .left-side {
+    border-right-color: #FFFFFF !important;
+}
+
+.skin-blue .sidebar-menu > li.header,
+.sidebar-menu > li.header {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    font-family: 'Archivo Black', sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em;
+    margin: 8px 8px 6px !important;
+    padding: 7px 10px !important;
+    border-radius: 4px !important;
+}
+
+html.dark .sidebar-menu > li.header {
+    background-color: var(--admin-orange) !important;
+    color: #000000 !important;
+}
+
+.sidebar-menu,
+ul.sidebar-menu {
+    background-color: transparent !important;
+}
+
+.skin-blue .sidebar-menu > li > a,
+.sidebar-menu > li > a,
+.sidebar a {
+    color: var(--admin-ink) !important;
+    font-weight: 700 !important;
+    border: 2px solid transparent !important;
+    border-left-width: 2px !important;
+    margin: 3px 8px !important;
+    padding: 9px 11px !important;
+    border-radius: 4px !important;
+    background-color: transparent !important;
+}
+
+.skin-blue .sidebar-menu > li > a:hover,
+.sidebar-menu > li > a:hover,
+.sidebar a:hover {
+    background-color: var(--admin-orange) !important;
+    border: 2px solid #000000 !important;
+    color: #000000 !important;
+}
+
+html.dark .skin-blue .sidebar-menu > li > a:hover,
+html.dark .sidebar-menu > li > a:hover,
+html.dark .sidebar a:hover {
+    border-color: #FFFFFF !important;
+}
+
+.skin-blue .sidebar-menu > li.active > a,
+.skin-blue .sidebar-menu > li.menu-open > a,
+.sidebar-menu > li.active > a,
+.sidebar-menu > li.menu-open > a {
+    background-color: var(--admin-orange) !important;
+    color: #000000 !important;
+    border: 3px solid #000000 !important;
+    box-shadow: 3px 3px 0px #000000 !important;
+    font-weight: 900 !important;
+}
+
+html.dark .skin-blue .sidebar-menu > li.active > a,
+html.dark .skin-blue .sidebar-menu > li.menu-open > a,
+html.dark .sidebar-menu > li.active > a,
+html.dark .sidebar-menu > li.menu-open > a {
+    border-color: #FFFFFF !important;
+    box-shadow: 3px 3px 0px #FFFFFF !important;
+}
+
+.skin-blue .sidebar-menu > li.active > a > .fa,
+.skin-blue .sidebar-menu > li > a > .fa,
+.sidebar-menu > li.active > a > .fa,
+.sidebar-menu > li > a > .fa {
+    color: inherit !important;
+}
+
+/* Submenus (treeview) */
+.skin-blue .sidebar-menu > li > .treeview-menu,
+.sidebar-menu > li > .treeview-menu {
+    background-color: transparent !important;
+    padding: 2px 0 4px !important;
+}
+
+.skin-blue .sidebar-menu .treeview-menu > li > a,
+.sidebar-menu .treeview-menu > li > a {
+    color: var(--admin-ink-soft) !important;
+    font-weight: 600 !important;
+    border: 2px solid transparent !important;
+    margin: 2px 8px 2px 20px !important;
+    padding: 6px 10px !important;
+    border-radius: 4px !important;
+    background-color: transparent !important;
+}
+
+.skin-blue .sidebar-menu .treeview-menu > li > a:hover,
+.skin-blue .sidebar-menu .treeview-menu > li.active > a,
+.sidebar-menu .treeview-menu > li > a:hover,
+.sidebar-menu .treeview-menu > li.active > a {
+    background-color: var(--admin-orange) !important;
+    border: 2px solid #000000 !important;
+    color: #000000 !important;
+}
+
+html.dark .skin-blue .sidebar-menu .treeview-menu > li > a:hover,
+html.dark .skin-blue .sidebar-menu .treeview-menu > li.active > a,
+html.dark .sidebar-menu .treeview-menu > li > a:hover,
+html.dark .sidebar-menu .treeview-menu > li.active > a {
+    border-color: #FFFFFF !important;
+}
+
+/* User panel inside sidebar */
+.user-panel > .info > a,
+.user-panel > .info > p {
+    color: var(--admin-ink) !important;
+}
+
+.user-panel > .image > img {
+    border: 2px solid var(--admin-ink) !important;
+}
+
+/* ---------- Boxes ---------- */
+.box,
+.box.box-default,
+.nav-tabs-custom,
+.info-box,
+.small-box {
+    background-color: var(--admin-cream) !important;
+    color: var(--admin-ink) !important;
+    border: 3px solid #000000 !important;
+    border-radius: 4px !important;
+    box-shadow: 4px 4px 0px #000000 !important;
+    overflow: hidden;
+}
+
+html.dark .box,
+html.dark .box.box-default,
+html.dark .nav-tabs-custom,
+html.dark .info-box,
+html.dark .small-box {
+    border-color: #FFFFFF !important;
+    box-shadow: 4px 4px 0px #FFFFFF !important;
+}
+
+.box.box-primary, .box.box-success, .box.box-danger, .box.box-warning {
+    border-top-width: 3px !important;
+}
+
+.box-header,
+.box-header.with-border {
+    background-color: var(--admin-orange) !important;
+    color: #000000 !important;
+    border-bottom: 3px solid #000000 !important;
+    padding: 12px 16px !important;
+}
+
+html.dark .box-header {
+    border-bottom-color: #FFFFFF !important;
+}
+
+.box-header .box-title,
+.box-header > .box-tools .btn,
+.box-header > .box-tools .btn:hover {
+    color: #000000 !important;
+    background-color: transparent !important;
+    border-color: #000000 !important;
+    box-shadow: 2px 2px 0px #000000 !important;
+}
+
+.box-body {
+    background-color: var(--admin-cream) !important;
+    color: var(--admin-ink) !important;
+}
+
+.box-footer {
+    background-color: var(--admin-surface) !important;
+    color: var(--admin-ink) !important;
+    border-top: 3px solid #000000 !important;
+}
+
+html.dark .box-footer {
+    border-top-color: #FFFFFF !important;
+}
+
+.small-box h3,
+.small-box p,
+.info-box-text,
+.info-box-number {
+    color: var(--admin-ink) !important;
+}
+
+.small-box .icon { color: var(--admin-ink) !important; opacity: 0.35; }
+
+/* ---------- Tables ---------- */
+.table {
+    background-color: var(--admin-surface) !important;
+    color: var(--admin-ink) !important;
+    border: 3px solid #000000 !important;
+    border-radius: 4px !important;
+}
+
+html.dark .table {
+    border-color: #FFFFFF !important;
+}
+
+.table > thead > tr > th {
+    background-color: var(--admin-orange) !important;
+    color: #000000 !important;
+    font-family: 'Archivo Black', sans-serif !important;
+    text-transform: uppercase !important;
+    font-weight: 900 !important;
+    border-bottom: 3px solid #000000 !important;
+}
+
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th {
+    border-top: 2px solid rgba(0, 0, 0, 0.25) !important;
+    color: var(--admin-ink) !important;
+    font-weight: 600 !important;
+    vertical-align: middle;
+}
+
+html.dark .table > tbody > tr > td,
+html.dark .table > tbody > tr > th,
+html.dark .table > tfoot > tr > td,
+html.dark .table > tfoot > tr > th {
+    border-top-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.table-hover > tbody > tr:hover,
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: var(--admin-panel-2) !important;
+}
+
+.table-bordered,
+.table-bordered > tbody > tr > td,
+.table-bordered > tbody > tr > th,
+.table-bordered > thead > tr > th,
+.table-bordered > tfoot > tr > th {
+    border-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+.table > tbody > tr > td > code {
+    background: #000000 !important;
+    color: #FF8A33 !important;
+    border-radius: 2px;
+    padding: 1px 5px;
+}
+
+html.dark .table > tbody > tr > td > code {
+    background: #000000 !important;
+    color: #FF8A33 !important;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    border: 3px solid #000000 !important;
+    border-radius: 4px !important;
+    box-shadow: 3px 3px 0px #000000 !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    color: #000000 !important;
+    transition: transform 100ms ease, box-shadow 100ms ease !important;
+}
+
+html.dark .btn {
+    border-color: #FFFFFF !important;
+    box-shadow: 3px 3px 0px #FFFFFF !important;
+    color: #FFFFFF !important;
+}
+
+.btn:hover, .btn:focus, .btn:active, .btn.active,
+.open > .dropdown-toggle.btn-default {
+    transform: translate(-2px, -2px) !important;
+    box-shadow: 5px 5px 0px currentColor !important;
+}
+
+.btn:active, .btn.active {
+    transform: translate(2px, 2px) !important;
+    box-shadow: none !important;
+}
+
+.btn-primary, .btn-info {
+    background-color: var(--admin-orange) !important;
+    border-color: #000000 !important;
+    box-shadow: 3px 3px 0px #000000 !important;
+    color: #000000 !important;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active,
+.btn-info:hover, .btn-info:focus {
+    background-color: #D95A00 !important;
+    border-color: #000000 !important;
+    color: #000000 !important;
+}
+
+.btn-default {
+    background-color: var(--admin-panel-2) !important;
+    border-color: #000000 !important;
+    color: #000000 !important;
+}
+
+html.dark .btn-default {
+    background-color: #242424 !important;
+    border-color: #FFFFFF !important;
+    color: #FFFFFF !important;
+}
+
+.btn-success {
+    background-color: #22C55E !important;
+    border-color: #000000 !important;
+    color: #000000 !important;
+}
+
+.btn-danger {
+    background-color: #EF4444 !important;
+    border-color: #000000 !important;
+    color: #000000 !important;
+}
+
+.btn-warning {
+    background-color: #FACC15 !important;
+    border-color: #000000 !important;
+    color: #000000 !important;
+}
+
+.btn-link {
+    color: var(--admin-orange) !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    text-transform: none !important;
+}
+
+/* ---------- Forms ---------- */
+.form-control,
+.select2-container .select2-selection--single,
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+    background-color: var(--admin-surface) !important;
+    color: var(--admin-ink) !important;
+    border: 3px solid #000000 !important;
+    border-radius: 4px !important;
+    box-shadow: 2px 2px 0px #000000 !important;
+    font-weight: 600 !important;
+    height: auto !important;
+    min-height: 38px;
+    padding: 8px 12px !important;
+}
+
+html.dark .form-control,
+html.dark .select2-container .select2-selection--single,
+html.dark .select2-container--default .select2-selection--single,
+html.dark .select2-container--default .select2-selection--multiple {
+    border-color: #FFFFFF !important;
+    box-shadow: 2px 2px 0px #FFFFFF !important;
+}
+
+.form-control:focus,
+.select2-container--default.select2-container--focus .select2-selection--single {
+    border-color: var(--admin-orange) !important;
+    box-shadow: 4px 4px 0px #000000 !important;
+    outline: none !important;
+}
+
+.form-control::placeholder {
+    color: var(--admin-ink-soft) !important;
+    opacity: 0.75;
+}
+
+select.form-control option,
+.select2-results__option {
+    background-color: var(--admin-surface) !important;
+    color: var(--admin-ink) !important;
+}
+
+html.dark select.form-control option {
+    background-color: #242424 !important;
+    color: #FFFFFF !important;
+}
+
+.select2-dropdown {
+    background-color: var(--admin-surface) !important;
+    color: var(--admin-ink) !important;
+    border: 3px solid var(--admin-ink) !important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: var(--admin-orange) !important;
+    color: #000000 !important;
+}
+
+.select2-search__field {
+    background-color: var(--admin-surface) !important;
+    color: var(--admin-ink) !important;
+    border: 2px solid var(--admin-ink) !important;
+}
+
+label,
+.control-label {
+    color: var(--admin-ink) !important;
+    font-weight: 700 !important;
+}
+
+.help-block,
+.text-muted,
+.text-gray,
+.small.text-gray {
+    color: var(--admin-ink-soft) !important;
+}
+
+.input-group-addon {
+    background-color: var(--admin-panel-2) !important;
+    border: 3px solid #000000 !important;
+    color: var(--admin-ink) !important;
+    font-weight: 700 !important;
+}
+
+html.dark .input-group-addon {
+    border-color: #FFFFFF !important;
+}
+
+/* Switches / checkboxes */
+input[type='checkbox'],
+input[type='radio'] {
+    accent-color: var(--admin-orange);
+}
+
+/* ---------- Nav tabs / pills ---------- */
+.nav-tabs-custom > .nav-tabs {
+    background-color: var(--admin-panel-2) !important;
+    border-bottom: 3px solid #000000 !important;
+}
+
+.nav-tabs-custom > .nav-tabs > li > a {
+    color: var(--admin-ink) !important;
+    font-weight: 800 !important;
+}
+
+.nav-tabs-custom > .nav-tabs > li > a:hover {
+    background-color: var(--admin-orange) !important;
+    color: #000000 !important;
+}
+
+.nav-tabs-custom > .nav-tabs > li.active > a,
+.nav-tabs-custom > .nav-tabs > li.active > a:hover {
+    background-color: var(--admin-surface) !important;
+    color: var(--admin-ink) !important;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover {
+    background-color: var(--admin-orange) !important;
+    color: #000000 !important;
+}
+
+.list-group-item {
+    background-color: var(--admin-cream) !important;
+    border: 2px solid var(--admin-ink) !important;
+    color: var(--admin-ink) !important;
+}
+
+.list-group-item:hover {
+    background-color: var(--admin-panel-2) !important;
+}
+
+/* ---------- Modals / dropdowns ---------- */
+.modal-content {
+    background-color: var(--admin-cream) !important;
+    color: var(--admin-ink) !important;
+    border: 3px solid var(--admin-ink) !important;
+    border-radius: 4px !important;
+    box-shadow: 6px 6px 0px var(--admin-ink) !important;
+}
+
+.modal-header,
+.modal-footer {
+    border-color: var(--admin-ink) !important;
+}
+
+.modal-header .close {
+    color: var(--admin-ink) !important;
+    opacity: 0.8;
+}
+
+.dropdown-menu {
+    background-color: var(--admin-surface) !important;
+    border: 3px solid var(--admin-ink) !important;
+    border-radius: 4px !important;
+    box-shadow: 4px 4px 0px var(--admin-ink) !important;
+}
+
+.dropdown-menu > li > a {
+    color: var(--admin-ink) !important;
+    font-weight: 700 !important;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    background-color: var(--admin-orange) !important;
+    color: #000000 !important;
+}
+
+.dropdown-menu > .divider {
+    background-color: var(--admin-ink) !important;
+}
+
+/* ---------- Pagination / footer / misc ---------- */
+.pagination > li > a,
+.pagination > li > span {
+    background-color: var(--admin-surface) !important;
+    border: 2px solid var(--admin-ink) !important;
+    color: var(--admin-ink) !important;
+    font-weight: 700 !important;
+}
+
+.pagination > li > a:hover {
+    background-color: var(--admin-orange) !important;
+    color: #000000 !important;
+}
+
+.pagination > .active > a,
+.pagination > .active > span {
+    background-color: var(--admin-orange) !important;
+    border-color: var(--admin-ink) !important;
+    color: #000000 !important;
+    box-shadow: 2px 2px 0px var(--admin-ink) !important;
+}
+
+.main-footer {
+    background-color: var(--admin-cream) !important;
+    color: var(--admin-ink) !important;
+    border-top: 3px solid var(--admin-ink) !important;
+}
+
+.alert {
+    border: 3px solid var(--admin-ink) !important;
+    border-radius: 4px !important;
+    box-shadow: 3px 3px 0px var(--admin-ink) !important;
+    font-weight: 700 !important;
+}
+
+.alert-danger { background-color: #EF4444 !important; color: #000000 !important; }
+.alert-success { background-color: #22C55E !important; color: #000000 !important; }
+.alert-warning { background-color: #FACC15 !important; color: #000000 !important; }
+.alert-info { background-color: #FFE4CC !important; color: #000000 !important; }
+
+html.dark .alert-info { background-color: #FFE4CC !important; color: #000000 !important; }
+
+.callout {
+    border-radius: 4px !important;
+    border: 3px solid var(--admin-ink) !important;
+}
+
+.well {
+    background-color: var(--admin-panel-2) !important;
+    border: 3px solid var(--admin-ink) !important;
+    color: var(--admin-ink) !important;
+}
+
+.label-default {
+    background-color: var(--admin-panel-2) !important;
+    color: var(--admin-ink) !important;
+    border: 2px solid var(--admin-ink) !important;
+}
+
+.img-thumbnail {
+    background-color: var(--admin-surface) !important;
+    border: 2px solid var(--admin-ink) !important;
+}
+
+pre {
+    background-color: #000000 !important;
+    color: #E5E5E5 !important;
+    border: 3px solid var(--admin-ink) !important;
+    border-radius: 4px !important;
+}
+
+code {
+    background-color: rgba(0, 0, 0, 0.08) !important;
+    color: #B34A00 !important;
+    border-radius: 2px;
+}
+
+html.dark code {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    color: #FFA066 !important;
+}
+
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper select {
+    background-color: var(--admin-surface) !important;
+    color: var(--admin-ink) !important;
+    border: 3px solid var(--admin-ink) !important;
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing {
+    color: var(--admin-ink-soft) !important;
+}
+
+/* Login page */
+.login-page {
+    background-color: var(--admin-bg) !important;
+}
+
+.login-box-body {
+    background-color: var(--admin-cream) !important;
+    border: 3px solid var(--admin-ink) !important;
+    box-shadow: 6px 6px 0px var(--admin-ink) !important;
+    border-radius: 4px !important;
+    color: var(--admin-ink) !important;
+}
+
+.login-logo a,
+.login-box-msg {
+    color: var(--admin-ink) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: var(--admin-bg); }
+::-webkit-scrollbar-thumb {
+    background: var(--admin-orange);
+    border: 2px solid var(--admin-ink);
+    border-radius: 4px;
+}
+
+/* ---------- Dark mode toggle button ---------- */
+.admin-theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    margin: 7px 8px 0 0;
+    border: 3px solid #000000 !important;
+    border-radius: 4px !important;
+    background-color: var(--admin-orange) !important;
+    color: #000000 !important;
+    box-shadow: 3px 3px 0px #000000 !important;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 100ms ease, box-shadow 100ms ease;
+}
+
+html.dark .admin-theme-toggle {
+    border-color: #FFFFFF !important;
+    box-shadow: 3px 3px 0px #FFFFFF !important;
+}
+
+.admin-theme-toggle:hover {
+    transform: translate(-2px, -2px);
+}
+
+.admin-theme-toggle:active {
+    transform: translate(2px, 2px);
+    box-shadow: none !important;
+}
+
+@media (max-width: 767px) {
+    .skin-blue .main-header .logo,
+    .skin-blue .main-header .navbar {
+        background-color: var(--admin-cream) !important;
+    }
+}
+
+/* =========================================================
+   Gutters: keep space between sidebar and page content
+   ========================================================= */
+.content-wrapper > .content,
+.content-wrapper > .content-header {
+    padding-left: clamp(14px, 2vw, 26px) !important;
+    padding-right: clamp(14px, 2vw, 26px) !important;
+}
+
+.content-wrapper > .content {
+    padding-top: 12px !important;
+}
+
+@media (max-width: 767px) {
+    .content-wrapper > .content,
+    .content-wrapper > .content-header {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+}
+
+
+/* Background image Light/Dark for admin content */
+.content-wrapper {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.76)),
+        var(--admin-brutal-bg-image, none) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+html.dark .content-wrapper {
+    background-image:
+        linear-gradient(rgba(17, 17, 17, 0.76), rgba(17, 17, 17, 0.76)),
+        var(--admin-brutal-bg-image, none) !important;
+}
+
+/* ADMIN VIDEO BACKGROUND LAYER */
+.content-wrapper {
+    position: relative;
+    isolation: isolate;
+}
+
+#pteroAdminThemeBackgroundVideo {
+    display: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.content-wrapper > :not(#pteroAdminThemeBackgroundVideo) {
+    position: relative;
+    z-index: 1;
+}
