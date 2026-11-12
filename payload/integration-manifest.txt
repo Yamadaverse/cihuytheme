@@ -1,0 +1,10 @@
+# Core files replaced only when their live Git blob SHA-1 matches the official v1.15.2 hash.
+# Files already matching the integrated theme snapshot are recognized as installed.
+resources/views/layouts/admin.blade.php
+resources/views/templates/wrapper.blade.php
+routes/admin.php
+resources/scripts/index.tsx
+resources/scripts/components/dashboard/ServerRow.tsx
+resources/scripts/components/server/console/ServerConsoleContainer.tsx
+resources/scripts/components/server/console/PowerButtons.tsx
+resources/scripts/routers/ServerRouter.tsx
