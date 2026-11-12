@@ -1,0 +1,14 @@
+# Runtime logs and local backups
+/logs/
+/backups/
+*.log
+
+# Never commit environment secrets or local dependencies
+.env
+.env.*
+!.env.example
+/vendor/
+/node_modules/
+
+# Generated frontend output
+/public/assets/
